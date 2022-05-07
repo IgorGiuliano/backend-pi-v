@@ -1,0 +1,44 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "mongodb"
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  email String @unique
+  password String
+  name String
+  lastName String
+  cpf String @unique
+  cargo String
+  instituicao Instituicao @relation(fields: [cnpjDaInstituicao], references: [cnpjDaInstituicao])
+  cnpjDaInstituicao String
+}
+
+model Instituicao {
+  cnpjDaInstituicao String @id @map("_id")
+  nomeDaInstituicao String
+  tipoDeInstituicao String
+  users User[]
+  devices Devices[]
+}
+
+model Devices {
+  deviceId String @id @map("_id")
+  instituicao Instituicao @relation(fields: [cnpjDaInstituicao], references: [cnpjDaInstituicao])
+  cnpjDaInstituicao String
+  messages DevicesMessages[]
+}
+
+model DevicesMessages {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  device Devices @relation(fields: [deviceId], references: [deviceId])  
+  deviceId String
+  weight Float
+  createdAt Int
+}
