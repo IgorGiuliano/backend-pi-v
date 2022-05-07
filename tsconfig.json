@@ -5,7 +5,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
-    "allowJs": true,
+    "allowJs": false,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,   
