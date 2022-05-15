@@ -50,7 +50,7 @@ class RegisterController {
             return response.status(201).json(user);
         } catch (err: unknown) {
             if (err instanceof Error) {
-                return response.status(400).json({ message: err.message });
+                return response.status(400).json({ Error: err.message });
             }
         }
 

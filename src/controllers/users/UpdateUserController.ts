@@ -17,7 +17,7 @@ class UpdateUserController {
 
         try {
             const result = await service.execute(id, email, name, lastName, cpf, cargo);
-            return response.status(200).json({ data: result });
+            return response.status(200).json({ Data: result });
         } catch (err: unknown) {
             if (err instanceof Error) {
                 return response.status(400).json({ Error: err.message });
