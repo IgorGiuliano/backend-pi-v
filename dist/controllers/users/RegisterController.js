@@ -29,7 +29,7 @@ class RegisterController {
         }
         catch (err) {
             if (err instanceof Error) {
-                return response.status(400).json({ message: err.message });
+                return response.status(400).json({ Error: err.message });
             }
         }
         return null;

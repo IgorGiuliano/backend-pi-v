@@ -8,7 +8,7 @@ class UpdateUserController {
         const service = new UpdateUserService_1.UpdateUserService();
         try {
             const result = await service.execute(id, email, name, lastName, cpf, cargo);
-            return response.status(200).json({ data: result });
+            return response.status(200).json({ Data: result });
         }
         catch (err) {
             if (err instanceof Error) {
