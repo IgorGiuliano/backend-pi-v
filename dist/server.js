@@ -10,7 +10,9 @@ const UserRoutes_1 = require("./routes/UserRoutes");
 const DeviceRoutes_1 = require("./routes/DeviceRoutes");
 const errorHandler_1 = require("./middlewares/errorHandler");
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: '*'
+}));
 app.use(express_1.default.json());
 app.use(UserRoutes_1.userRoutes);
 app.use(DeviceRoutes_1.deviceRouter);
