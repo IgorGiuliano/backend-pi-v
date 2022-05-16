@@ -14,7 +14,7 @@ class LoginController {
                 response.json({ Error: 'Senha com menos de 6 caracteres' });
             }
             const token = await service.execute(email, password);
-            return response.status(200).json({ Logged: token });
+            return response.status(200).json(token);
         }
         catch (err) {
             if (err instanceof Error) {

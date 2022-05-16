@@ -22,7 +22,7 @@ class LoginController {
 
             const token = await service.execute(email, password);
 
-            return response.status(200).json({ Logged: token });
+            return response.status(200).json(token);
         } catch (err: unknown) {
             if (err instanceof Error) {
                 return response.status(400).json({ Error: err.message }).redirect('/');
