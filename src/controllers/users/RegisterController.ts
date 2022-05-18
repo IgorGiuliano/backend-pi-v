@@ -47,7 +47,7 @@ class RegisterController {
                 name, lastName, email, cpf, password, cargo, cnpjDaInstituicao, nomeDaInstituicao, tipoDeInstituicao
             );
 
-            return response.status(201).json({ registered: user });
+            return response.status(200).json({ registered: user });
         } catch (err: unknown) {
             if (err instanceof Error) {
                 return response.status(400).json({ Error: err.message });

@@ -25,7 +25,7 @@ class RegisterController {
                 throw new Error('CNPJ inválido - DÃÃÃ');
             }
             const user = await service.execute(name, lastName, email, cpf, password, cargo, cnpjDaInstituicao, nomeDaInstituicao, tipoDeInstituicao);
-            return response.status(201).json(user);
+            return response.status(200).json({ registered: user });
         }
         catch (err) {
             if (err instanceof Error) {
