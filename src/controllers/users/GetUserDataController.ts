@@ -1,5 +1,5 @@
-import { GetUserDataService } from '@services/user/GetUserDataService';
 import { Request, Response } from 'express';
+import { GetUserDataService } from '../../services/user/GetUserDataService';
 
 interface IRequestBody {
     id: string
