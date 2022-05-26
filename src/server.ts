@@ -6,10 +6,7 @@ import { deviceRouter } from './routes/DeviceRoutes';
 import { errorHandler } from './middlewares/errorHandler';
 
 const app = express();
-app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST']
-}));
+app.use(cors());
 app.use(express.json());
 app.use(userRoutes);
 app.use(deviceRouter);
