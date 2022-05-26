@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GetUserDataControler = void 0;
-const GetUserDataService_1 = require("@services/user/GetUserDataService");
+const GetUserDataService_1 = require("../../services/user/GetUserDataService");
 class GetUserDataControler {
     async handle(request, response) {
         const { id } = request.body;

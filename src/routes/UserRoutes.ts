@@ -4,8 +4,8 @@ import { RegisterController } from '../controllers/users/RegisterController';
 import { UpdatePasswordController } from '../controllers/users/UpdatePasswordController';
 import { UpdateUserController } from '../controllers/users/UpdateUserController';
 import { DeleteController } from '../controllers/users/DeleteController';
-import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 import { GetUserDataControler } from '../controllers/users/GetUserDataController';
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 const userRoutes = Router();
 
