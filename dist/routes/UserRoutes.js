@@ -18,4 +18,4 @@ userRoutes.post('/update-password', ensureAuthenticated_1.ensureAuthenticated, n
 userRoutes.post('/update-user', ensureAuthenticated_1.ensureAuthenticated, new UpdateUserController_1.UpdateUserController().handle);
 userRoutes.post('/delete-user', ensureAuthenticated_1.ensureAuthenticated, new DeleteController_1.DeleteController().handle);
 userRoutes.post('/get-user-data', ensureAuthenticated_1.ensureAuthenticated, new GetUserDataController_1.GetUserDataControler().handle);
-userRoutes.post('/get-user-sensors', ensureAuthenticated_1.ensureAuthenticated, new GetUserSensorsController_1.GetUserSensorsControler().handle);
+userRoutes.post('/get-user-sensors', new GetUserSensorsController_1.GetUserSensorsControler().handle);
