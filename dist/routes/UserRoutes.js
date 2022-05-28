@@ -8,6 +8,7 @@ const UpdatePasswordController_1 = require("../controllers/users/UpdatePasswordC
 const UpdateUserController_1 = require("../controllers/users/UpdateUserController");
 const DeleteController_1 = require("../controllers/users/DeleteController");
 const GetUserDataController_1 = require("../controllers/users/GetUserDataController");
+const GetUserSensorsController_1 = require("../controllers/users/GetUserSensorsController");
 const ensureAuthenticated_1 = require("../middlewares/ensureAuthenticated");
 const userRoutes = (0, express_1.Router)();
 exports.userRoutes = userRoutes;
@@ -17,3 +18,4 @@ userRoutes.post('/update-password', ensureAuthenticated_1.ensureAuthenticated, n
 userRoutes.post('/update-user', ensureAuthenticated_1.ensureAuthenticated, new UpdateUserController_1.UpdateUserController().handle);
 userRoutes.post('/delete-user', ensureAuthenticated_1.ensureAuthenticated, new DeleteController_1.DeleteController().handle);
 userRoutes.post('/get-user-data', ensureAuthenticated_1.ensureAuthenticated, new GetUserDataController_1.GetUserDataControler().handle);
+userRoutes.post('/get-user-sensors', ensureAuthenticated_1.ensureAuthenticated, new GetUserSensorsController_1.GetUserSensorsControler().handle);

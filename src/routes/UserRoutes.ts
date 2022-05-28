@@ -5,6 +5,7 @@ import { UpdatePasswordController } from '../controllers/users/UpdatePasswordCon
 import { UpdateUserController } from '../controllers/users/UpdateUserController';
 import { DeleteController } from '../controllers/users/DeleteController';
 import { GetUserDataControler } from '../controllers/users/GetUserDataController';
+import { GetUserSensorsControler } from '../controllers/users/GetUserSensorsController';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 const userRoutes = Router();
@@ -15,5 +16,6 @@ userRoutes.post('/update-password', ensureAuthenticated, new UpdatePasswordContr
 userRoutes.post('/update-user', ensureAuthenticated, new UpdateUserController().handle);
 userRoutes.post('/delete-user', ensureAuthenticated, new DeleteController().handle);
 userRoutes.post('/get-user-data', ensureAuthenticated, new GetUserDataControler().handle);
+userRoutes.post('/get-user-sensors', ensureAuthenticated, new GetUserSensorsControler().handle);
 
 export { userRoutes };
