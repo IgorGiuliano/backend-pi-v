@@ -16,6 +16,6 @@ userRoutes.post('/update-password', ensureAuthenticated, new UpdatePasswordContr
 userRoutes.post('/update-user', ensureAuthenticated, new UpdateUserController().handle);
 userRoutes.post('/delete-user', ensureAuthenticated, new DeleteController().handle);
 userRoutes.post('/get-user-data', ensureAuthenticated, new GetUserDataControler().handle);
-userRoutes.post('/get-user-sensors', new GetUserSensorsControler().handle);
+userRoutes.get('/get-user-sensors', ensureAuthenticated, new GetUserSensorsControler().handle);
 
 export { userRoutes };
