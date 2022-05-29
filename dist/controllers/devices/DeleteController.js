@@ -8,7 +8,7 @@ class DeleteController {
         const service = new DeleteService_1.DeleteSevice();
         try {
             const result = await service.execute(deviceId);
-            return response.status(200).json(result);
+            return response.status(200).json({ deleted: result });
         }
         catch (err) {
             if (err instanceof Error) {
