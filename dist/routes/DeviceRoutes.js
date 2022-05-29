@@ -13,7 +13,7 @@ const deviceRouter = (0, express_1.Router)();
 exports.deviceRouter = deviceRouter;
 deviceRouter.post('/create-device', ensureAuthenticated_1.ensureAuthenticated, new CreateController_1.CreateController().handle);
 deviceRouter.post('/delete-device', ensureAuthenticated_1.ensureAuthenticated, new DeleteController_1.DeleteController().handle);
-deviceRouter.get('/last-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastMeasurementController_1.GetLastMeasurementController().handle);
+deviceRouter.post('/last-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastMeasurementController_1.GetLastMeasurementController().handle);
 deviceRouter.get('/last-day-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastDayMeasurementController_1.GetLastDayMeasurementController().handle);
 deviceRouter.get('/last-week-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastWeekMeasurementController_1.GetLastWeekMeasurementController().handle);
 deviceRouter.get('/last-month-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastMonthMeasurementController_1.GetLastMonthMeasurementController().handle);

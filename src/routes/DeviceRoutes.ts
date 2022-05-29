@@ -11,7 +11,7 @@ const deviceRouter = Router();
 
 deviceRouter.post('/create-device', ensureAuthenticated, new CreateController().handle);
 deviceRouter.post('/delete-device', ensureAuthenticated, new DeleteController().handle);
-deviceRouter.get('/last-message', ensureAuthenticated, new GetLastMeasurementController().handle);
+deviceRouter.post('/last-message', ensureAuthenticated, new GetLastMeasurementController().handle);
 deviceRouter.get('/last-day-message', ensureAuthenticated, new GetLastDayMeasurementController().handle);
 deviceRouter.get('/last-week-message', ensureAuthenticated, new GetLastWeekMeasurementController().handle);
 deviceRouter.get('/last-month-message', ensureAuthenticated, new GetLastMonthMeasurementController().handle);
