@@ -12,7 +12,7 @@ class GetLastSevenRowsMeasurementController {
 
         try {
             const result = await service.execute(deviceId);
-            return response.status(200).json({ result });
+            return response.status(200).json(result);
         } catch (err: unknown) {
             if (err instanceof Error) {
                 return response.status(400).json({ Error: err.message });

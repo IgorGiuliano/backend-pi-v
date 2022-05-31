@@ -8,7 +8,7 @@ class GetLastSevenRowsMeasurementController {
         const service = new GetLastSevenRowsMeasurementService_1.GetLastSevenRowsMeasurementService();
         try {
             const result = await service.execute(deviceId);
-            return response.status(200).json({ result });
+            return response.status(200).json(result);
         }
         catch (err) {
             if (err instanceof Error) {
