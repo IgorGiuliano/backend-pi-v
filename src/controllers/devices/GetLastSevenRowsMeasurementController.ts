@@ -1,14 +1,14 @@
 import { Request, Response } from 'express';
-import { GetLastWeekMeasurementService } from '../../services/devices/GetLastWeekMeasurementService';
+import { GetLastSevenRowsMeasurementService } from '../../services/devices/GetLastSevenRowsMeasurementService';
 
 interface IRequestBody {
     deviceId: string
 }
 
-class GetLastWeekMeasurementController {
+class GetLastSevenRowsMeasurementController {
     async handle(request: Request, response: Response) {
         const { deviceId } = request.body as IRequestBody;
-        const service = new GetLastWeekMeasurementService();
+        const service = new GetLastSevenRowsMeasurementService();
 
         try {
             const result = await service.execute(deviceId);
@@ -23,4 +23,4 @@ class GetLastWeekMeasurementController {
     }
 }
 
-export { GetLastWeekMeasurementController };
+export { GetLastSevenRowsMeasurementController };
