@@ -15,5 +15,5 @@ deviceRouter.post('/create-device', ensureAuthenticated_1.ensureAuthenticated, n
 deviceRouter.post('/delete-device', ensureAuthenticated_1.ensureAuthenticated, new DeleteController_1.DeleteController().handle);
 deviceRouter.post('/last-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastMeasurementController_1.GetLastMeasurementController().handle);
 deviceRouter.get('/last-day-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastDayMeasurementController_1.GetLastDayMeasurementController().handle);
-deviceRouter.get('/last-seven-messages', new GetLastSevenRowsMeasurementController_1.GetLastSevenRowsMeasurementController().handle);
+deviceRouter.post('/last-seven-messages', new GetLastSevenRowsMeasurementController_1.GetLastSevenRowsMeasurementController().handle);
 deviceRouter.get('/last-month-message', ensureAuthenticated_1.ensureAuthenticated, new GetLastMonthMeasurementController_1.GetLastMonthMeasurementController().handle);
