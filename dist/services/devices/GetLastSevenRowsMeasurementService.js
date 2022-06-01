@@ -11,7 +11,7 @@ class GetLastSevenRowsMeasurementService {
             where: {
                 deviceId
             },
-            take: 7
+            take: 70
         });
         return result;
     }
